@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw;
   height: 70px;
-  background: #d300cc;
+  background: #dd2c00;
   color: #fff;
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@ main, div {
 .page-buttons-row {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2em;
 }
 .page-button {
   padding: 0.5rem 1rem;
@@ -55,4 +55,10 @@ main, div {
   border: 1px solid #ddd;
   font-size: 1rem;
   font-family: inherit;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }

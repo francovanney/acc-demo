@@ -5,16 +5,15 @@
   left: 0;
   width: 100vw;
   height: 70px;
-  background: #d300cc;
+  background: #dd2c00;
   color: #fff;
   display: flex;
   align-items: center;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
-.main-header nav {
+.main-header span {
   width: 100%;
-  padding-left: 2rem;
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -45,7 +44,7 @@ main, div {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0px;
+  margin: 0px;
 }
 .page-log {
   min-height: 40px;
@@ -64,11 +63,4 @@ main, div {
   border: 1px solid #ddd;
   font-size: 1rem;
   font-family: inherit;
-}
-
-.fake-h1 {
-  font-size: 52.1px;
-  font-weight: bold;
-  margin: 0.67em 0;
-  line-height: 1.2;
 }

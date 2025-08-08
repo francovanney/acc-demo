@@ -10,12 +10,10 @@ export default function Page2() {
   return (
     <>
       <header className="main-header">
-        <nav>
-          <span>Demo Accesibilidad - Page 2</span>
-        </nav>
+        <span>Demo Accesibilidad - Page 2</span>
       </header>
       <header>
-        <div className="fake-h1">PAGE 2</div>
+        <h1 className="fake-h1">PAGE 2</h1>
       </header>
       <div>
         <div className="page-buttons-row">
@@ -26,13 +24,14 @@ export default function Page2() {
           >
             Botón 1
           </button>
-          <div className="page-button">Botón 2</div>
-          <span className="page-button">Botón 3</span>
+          <a className="page-button" onClick={() => handleDivClick(2)}>
+            Botón 2
+          </a>
+          <p className="page-button" onClick={() => handleDivClick(3)}>
+            Botón 3
+          </p>
         </div>
-        <div className="page-log">
-          <strong>Log:</strong>
-          <div className="page-log-box">{log}</div>
-        </div>
+        <output className="page-log-box">{log}</output>
       </div>
     </>
   );
