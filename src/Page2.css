@@ -1,8 +1,35 @@
+/* Header principal fijo */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  background: #d300cc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.main-header nav {
+  width: 100%;
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+main, div {
+  margin-top: 90px;
+}
+
 .page-buttons-row {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  align-items: center;
 }
+
 .page-button {
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -12,7 +39,13 @@
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  user-select: none;
+  height: 44px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
 }
 .page-log {
   min-height: 40px;
@@ -28,7 +61,6 @@
   border-radius: 6px;
   background: #f5f5f5;
   color: #222;
-  min-height: 2.5rem;
   border: 1px solid #ddd;
   font-size: 1rem;
   font-family: inherit;

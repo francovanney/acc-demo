@@ -9,6 +9,11 @@ export default function Page2() {
   };
   return (
     <>
+      <header className="main-header">
+        <nav>
+          <span>Demo Accesibilidad - Page 2</span>
+        </nav>
+      </header>
       <header>
         <div className="fake-h1">PAGE 2</div>
       </header>

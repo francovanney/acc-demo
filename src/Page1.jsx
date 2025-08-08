@@ -9,6 +9,11 @@ export default function Page1() {
   };
   return (
     <>
+      <header className="main-header">
+        <nav>
+          <span>Demo Accesibilidad - Page 1</span>
+        </nav>
+      </header>
       <header>
         <h1>PAGE 1</h1>
       </header>

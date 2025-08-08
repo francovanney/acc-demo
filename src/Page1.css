@@ -1,3 +1,27 @@
+/* Header principal fijo */
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  background: #d300cc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.main-header nav {
+  width: 100%;
+  padding-left: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+main, div {
+  margin-top: 90px;
+}
 .page-buttons-row {
   display: flex;
   gap: 1rem;
