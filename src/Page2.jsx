@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Page2.css";
+import avenga from "./assets/avenga.jpg";
 
 // Página no accesible - violaciones estructurales imperceptibles
 export default function Page2() {
@@ -14,6 +15,11 @@ export default function Page2() {
       </div>
       <div>
         <div className="fake-h1">PAGE 2</div>
+
+        <div className="logo-container-bad">
+          <img src={avenga} width={300} height="auto" />
+        </div>
+
         <div className="page-buttons-row">
           <button
             className="page-button"

@@ -25,9 +25,8 @@ main, div {
 
 .page-buttons-row {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  margin-bottom: 1rem;
-  align-items: center;
 }
 
 .page-button {
@@ -75,4 +74,27 @@ main, div {
 .page-button:focus {
   outline: 2px solid #e0e0e0; /* Color muy claro, casi invisible */
   outline-offset: 5px;
+}
+
+/* IMAGEN NO ACCESIBLE - Visualmente igual a Page1 pero sin accesibilidad */
+.logo-container-bad {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  display: block;
+}
+
+.logo-container-bad img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  /* VIOLACIONES DE ACCESIBILIDAD (invisibles visualmente): */
+  /* 1. Sin alt text (atributo faltante) */
+  /* 2. tabIndex={-1} - No accesible por teclado */
+  /* 3. Sin role="img" */
+  /* 4. Sin descripción adicional */
+  /* 5. Sin outline visible para foco */
+  outline: none !important;
 }

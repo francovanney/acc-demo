@@ -22,9 +22,11 @@ main, div {
 }
 .page-buttons-row {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
+
 .page-button-1 {
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -63,10 +65,33 @@ ul {
 
 
 .page-button-1:focus {
-  outline: 2px solid black; /* Color muy claro, casi invisible */
-  outline-offset: 2px;
+  outline: 3px solid #0066cc;
+  outline-offset: 3px;
+  transform: scale(1.02);
 }
 
 h1 {
   color: #636363;
+}
+
+.logo-container {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  display: block;
+}
+
+.logo-container img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Foco visible para la imagen */
+.logo-container img:focus {
+  outline: 3px solid #0066cc;
+  outline-offset: 3px;
+  transform: scale(1.02);
 }
