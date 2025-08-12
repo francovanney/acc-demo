@@ -10,11 +10,58 @@ export default function Page1() {
   };
   return (
     <>
-      <header className="main-header">Demo Accesibilidad - Page 1</header>
-      <header>
-        <h1>PAGE 1</h1>
+      {/* Skip Link - Solo visible al hacer focus */}
+      <a href="#main-content" className="skip-link">
+        Saltar al contenido principal
+      </a>
+
+      {/* Header con navegación accesible */}
+      <header className="site-header" role="banner">
+        <div className="header-container">
+          <div className="site-title">
+            <span>Page 1</span>
+          </div>
+
+          <nav
+            className="main-navigation"
+            role="navigation"
+            aria-label="Navegación principal"
+          >
+            <ul className="nav-list">
+              <li>
+                <a
+                  href="/page1"
+                  className="nav-link current"
+                  aria-current="page"
+                  aria-label="Página 1 (página actual)"
+                >
+                  Page 1
+                </a>
+              </li>
+              <li>
+                <a href="/page2" className="nav-link" aria-label="Página 2">
+                  Page 2
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="nav-link"
+                  aria-label="Acerca de este demo"
+                >
+                  Acerca de
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
-      <main>
+
+      {/* Contenido principal */}
+      <main id="main-content" role="main" tabIndex="-1">
+        <header className="page-header">
+          <h1>Page 1</h1>
+        </header>
         <div className="logo-container">
           <img
             src={avenga}

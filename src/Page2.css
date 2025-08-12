@@ -1,25 +1,71 @@
-/* Header principal fijo */
-.main-header {
+/* Header principal fijo - NO accesible pero visualmente igual a Page1 */
+.site-header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 70px;
+  width: 100%;
   background: #dd2c00;
   color: #fff;
-  display: flex;
-  align-items: center;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  margin: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  /* Sin role="banner" - violación semántica */
 }
-.main-header span {
-  
-  width: 100%;
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 70px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-title {
   font-size: 1.3rem;
   font-weight: bold;
 }
-main, div {
+
+/* Navegación NO accesible - CSS idéntico a Page1 pero para divs */
+.main-navigation .nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+  /* Sin text-decoration porque no son enlaces reales */
+  /* Sin outline en focus - violación de accesibilidad */
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  /* Sin text-decoration porque no son enlaces reales */
+}
+
+.nav-link.current {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+.nav-link.current::after {
+  content: " (actual)";
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+/* Ajuste del contenido principal - solo para el contenido, no el header */
+.page-content {
   margin-top: 90px;
 }
 
