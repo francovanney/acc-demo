@@ -9,9 +9,7 @@ export default function Page1() {
   };
   return (
     <>
-      <header className="main-header">
-        <span>Demo Accesibilidad - Page 1</span>
-      </header>
+      <header className="main-header">Demo Accesibilidad - Page 1</header>
       <header>
         <h1>PAGE 1</h1>
       </header>
@@ -22,7 +20,7 @@ export default function Page1() {
             <button
               type="button"
               aria-label="Enviar Formulario"
-              className="page-button"
+              className="page-button-1"
               onClick={() => handleClick(1)}
             >
               Enviar
@@ -32,7 +30,7 @@ export default function Page1() {
             <button
               type="button"
               aria-label="Enviar Formulario"
-              className="page-button"
+              className="page-button-1"
               onClick={() => handleClick(2)}
             >
               Enviar
@@ -42,7 +40,7 @@ export default function Page1() {
             <button
               type="button"
               aria-label="Enviar Formulario"
-              className="page-button"
+              className="page-button-1"
               onClick={() => handleClick(3)}
             >
               Enviar

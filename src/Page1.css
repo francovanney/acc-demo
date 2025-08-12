@@ -9,15 +9,13 @@
   color: #fff;
   display: flex;
   align-items: center;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.main-header nav {
   width: 100%;
   padding-left: 2rem;
   font-size: 1.3rem;
   font-weight: bold;
-  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main, div {
   margin-top: 90px;
@@ -25,9 +23,9 @@ main, div {
 .page-buttons-row {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
-.page-button {
+.page-button-1 {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   border: 1px solid #1976d2;
@@ -46,7 +44,7 @@ main, div {
 }
 
 .page-log-box {
-  margin-top: 0.5rem;
+  margin-top:2em;
   padding: 0.75rem 1rem;
   border-radius: 6px;
   background: #f5f5f5;
@@ -61,4 +59,14 @@ main, div {
 ul {
     list-style: none;
     padding: 0;
+}
+
+
+.page-button-1:focus {
+  outline: 2px solid black; /* Color muy claro, casi invisible */
+  outline-offset: 2px;
+}
+
+h1 {
+  color: #636363;
 }

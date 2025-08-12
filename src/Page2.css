@@ -11,12 +11,13 @@
   align-items: center;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin: 0;
 }
 .main-header span {
+  
   width: 100%;
   font-size: 1.3rem;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 main, div {
   margin-top: 90px;
@@ -63,4 +64,15 @@ main, div {
   border: 1px solid #ddd;
   font-size: 1rem;
   font-family: inherit;
+}
+
+.fake-h1 {
+  font-size: 51px;
+  font-weight: bold;
+  color: #9c9c9c;
+}
+
+.page-button:focus {
+  outline: 2px solid #e0e0e0; /* Color muy claro, casi invisible */
+  outline-offset: 5px;
 }

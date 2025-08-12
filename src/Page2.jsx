@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Page2.css";
 
-// Página no accesible visualmente similar
+// Página no accesible - violaciones estructurales imperceptibles
 export default function Page2() {
   const [log, setLog] = useState("");
   const handleDivClick = (num) => {
@@ -9,29 +9,27 @@ export default function Page2() {
   };
   return (
     <>
-      <header className="main-header">
+      <div className="main-header">
         <span>Demo Accesibilidad - Page 2</span>
-      </header>
-      <header>
-        <h1 className="fake-h1">PAGE 2</h1>
-      </header>
+      </div>
       <div>
+        <div className="fake-h1">PAGE 2</div>
         <div className="page-buttons-row">
           <button
             className="page-button"
             onClick={() => handleDivClick(1)}
             type="button"
           >
-            Botón 1
+            Enviar
           </button>
           <a className="page-button" onClick={() => handleDivClick(2)}>
-            Botón 2
+            Enviar
           </a>
           <p className="page-button" onClick={() => handleDivClick(3)}>
-            Botón 3
+            Enviar
           </p>
         </div>
-        <output className="page-log-box">{log}</output>
+        <div className="page-log-box">{log}</div>
       </div>
     </>
   );
