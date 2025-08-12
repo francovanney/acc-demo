@@ -1,3 +1,34 @@
+/* REGLA GLOBAL - Focus amarillo SOLO con teclado (excepto nav-links) */
+*:focus:not(.nav-link) {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Remover outline en mouse clicks pero mantener en teclado */
+*:focus:not(:focus-visible):not(.nav-link) {
+  outline: none !important;
+}
+
+/* Asegurar focus amarillo en elementos principales SOLO con teclado */
+main:focus-visible,
+div:focus-visible,
+section:focus-visible,
+article:focus-visible,
+aside:focus-visible,
+header:focus-visible,
+footer:focus-visible,
+nav:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Los enlaces de navegación usan sus propias reglas específicas */
+
 /* Skip Link - Solo visible al hacer focus */
 .skip-link {
   position: absolute;
@@ -13,10 +44,18 @@
   transition: top 0.3s ease;
 }
 
-.skip-link:focus {
+.skip-link:focus-visible {
   top: 0;
-  outline: 3px solid #ffcc00;
+  outline: 3px solid #ffcc00 !important;
   outline-offset: 2px;
+  background: #0066cc;
+  color: #fff;
+  /* Focus amarillo SOLO con navegación por teclado */
+}
+
+.skip-link:focus:not(:focus-visible) {
+  outline: none !important;
+  /* Remover outline en clicks con mouse */
 }
 
 /* Header accesible */
@@ -67,14 +106,38 @@
 }
 
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   text-decoration: underline;
+  color: #fff;
+  /* Hover SIN outline amarillo - solo background */
 }
 
-.nav-link:focus {
-  outline: 3px solid #ffcc00;
-  outline-offset: 2px;
-  background: rgba(255, 255, 255, 0.2);
+/* Focus SOLO con teclado - amarillo */
+.nav-link:focus-visible {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px !important;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* Forzar outline amarillo en navegación con Tab */
+nav .nav-link:focus-visible {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Sin outline en clicks con mouse */
+.nav-link:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+/* Cuando hay hover Y focus con teclado */
+.nav-link:hover:focus-visible {
+  background: rgba(255, 255, 255, 0.4);
+  text-decoration: underline;
+  color: #fff;
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px !important;
 }
 
 .nav-link.current {
@@ -138,14 +201,49 @@ ul {
 }
 
 
-.page-button-1:focus {
-  outline: 3px solid #0066cc;
-  outline-offset: 3px;
+.page-button-1:focus-visible {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px;
+  background: #0052a3;
   transform: scale(1.02);
+  /* Focus amarillo SOLO con navegación por teclado */
+}
+
+.page-button-1:focus:not(:focus-visible) {
+  outline: none !important;
+  /* Remover outline en clicks con mouse */
+}
+
+.page-button-1:hover {
+  background: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  /* Hover accesible con buen contraste */
 }
 
 h1 {
   color: #636363;
+}
+
+/* Focus amarillo para headings SOLO con teclado */
+h1:focus-visible,
+h2:focus-visible,
+h3:focus-visible,
+h4:focus-visible,
+h5:focus-visible,
+h6:focus-visible {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px !important;
+}
+
+/* Remover outline en clicks pero mantener en navegación por teclado */
+h1:focus:not(:focus-visible),
+h2:focus:not(:focus-visible),
+h3:focus:not(:focus-visible),
+h4:focus:not(:focus-visible),
+h5:focus:not(:focus-visible),
+h6:focus:not(:focus-visible) {
+  outline: none !important;
 }
 
 .logo-container {
@@ -163,8 +261,14 @@ h1 {
   transition: transform 0.2s ease-in-out;
 }
 
-.logo-container img:focus {
-  outline: 3px solid #0066cc;
-  outline-offset: 3px;
+.logo-container img:focus-visible {
+  outline: 3px solid #ffcc00 !important;
+  outline-offset: 2px;
   transform: scale(1.02);
+  /* Focus amarillo SOLO con navegación por teclado */
+}
+
+.logo-container img:focus:not(:focus-visible) {
+  outline: none !important;
+  /* Remover outline en clicks con mouse */
 }

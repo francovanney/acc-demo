@@ -44,13 +44,23 @@
   transition: all 0.2s ease;
   position: relative;
   cursor: pointer;
-  /* Sin text-decoration porque no son enlaces reales */
-  /* Sin outline en focus - violación de accesibilidad */
+  /* VIOLACIONES DE ACCESIBILIDAD EN FOCUS Y HOVER */
+  outline: none !important;
+  /* Elimina completamente el outline */
 }
 
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  /* Sin text-decoration porque no son enlaces reales */
+  background: rgba(200, 200, 200, 0.05);
+  color: #f0f0f0;
+  /* MAL CONTRASTE: Casi invisible sobre fondo rojo */
+}
+
+.nav-link:focus {
+  background: rgba(255, 255, 255, 0.08);
+  /* Focus visible pero con mal contraste */
+  outline: 2px solid #f0c0c0 !important;
+  outline-offset: 1px;
+  /* Color rosa muy claro sobre fondo rojo - mal contraste */
 }
 
 .nav-link.current {
@@ -115,32 +125,20 @@
   font-size: 51px;
   font-weight: bold;
   color: #9c9c9c;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .page-button:focus {
-  outline: 2px solid #e0e0e0; /* Color muy claro, casi invisible */
-  outline-offset: 5px;
+  outline: 2px solid #b3d9ff !important;
+  /* Focus visible pero azul muy claro sobre azul - mal contraste */
+  outline-offset: 1px;
+  background: rgba(25, 118, 210, 0.92);
+  /* Cambio sutil, difícil de notar */
 }
 
-/* IMAGEN NO ACCESIBLE - Visualmente igual a Page1 pero sin accesibilidad */
-.logo-container-bad {
-  margin: 2rem 0;
-  padding: 1rem;
-  text-align: center;
-  display: block;
-}
-
-.logo-container-bad img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-  /* VIOLACIONES DE ACCESIBILIDAD (invisibles visualmente): */
-  /* 1. Sin alt text (atributo faltante) */
-  /* 2. tabIndex={-1} - No accesible por teclado */
-  /* 3. Sin role="img" */
-  /* 4. Sin descripción adicional */
-  /* 5. Sin outline visible para foco */
-  outline: none !important;
+.page-button:hover {
+  background: rgba(25, 118, 210, 0.98);
+  color: rgba(255, 255, 255, 0.9);
+  /* Hover con muy poco contraste */
 }

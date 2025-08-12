@@ -60,7 +60,12 @@ export default function Page1() {
       {/* Contenido principal */}
       <main id="main-content" role="main" tabIndex="-1">
         <header className="page-header">
-          <h1>Page 1</h1>
+          <h1
+            tabIndex="0"
+            aria-label="Página 1 - Demostración de accesibilidad"
+          >
+            Page 1
+          </h1>
         </header>
         <div className="logo-container">
           <img
