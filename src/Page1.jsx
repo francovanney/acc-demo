@@ -31,7 +31,7 @@ export default function Page1() {
               <li>
                 <a
                   href="/page1"
-                  className="nav-link current"
+                  className="nav-link"
                   aria-current="page"
                   aria-label="Página 1 (página actual)"
                 >

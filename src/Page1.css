@@ -109,10 +109,8 @@ button:focus-visible,
   background: rgba(255, 255, 255, 0.2);
   text-decoration: underline;
   color: #fff;
-  /* Hover SIN outline amarillo - solo background */
 }
 
-/* Focus SOLO con teclado - amarillo */
 .nav-link:focus-visible {
   outline: 3px solid #ffcc00 !important;
   outline-offset: 2px !important;
@@ -120,13 +118,11 @@ button:focus-visible,
   color: #fff;
 }
 
-/* Forzar outline amarillo en navegación con Tab */
 nav .nav-link:focus-visible {
   outline: 3px solid #ffcc00 !important;
   outline-offset: 2px !important;
 }
 
-/* Sin outline en clicks con mouse */
 .nav-link:focus:not(:focus-visible) {
   outline: none !important;
 }
@@ -140,16 +136,6 @@ nav .nav-link:focus-visible {
   outline-offset: 2px !important;
 }
 
-.nav-link.current {
-  background: rgba(255, 255, 255, 0.2);
-  font-weight: bold;
-}
-
-.nav-link.current::after {
-  content: " (actual)";
-  font-size: 0.8em;
-  opacity: 0.8;
-}
 
 .page-header {
   text-align: center;
